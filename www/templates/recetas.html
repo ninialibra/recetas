@@ -1,0 +1,17 @@
+<ion-view view-title="Recetas">
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-buttons side="right">
+      <i class="button button-icon ion-ios-home" ng-click="irInicio();"></i>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="padding">
+    <ion-list>
+
+      <ion-item class="item item-icon-right" ng-repeat="receta in recetas|orderBy:'name'" type="item-text-wrap" href="#/receta/{{receta.id}}">
+
+        <h2>{{receta.name}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

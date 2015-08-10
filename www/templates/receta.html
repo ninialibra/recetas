@@ -1,0 +1,29 @@
+<ion-view view-title="{{receta.name}}">
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-buttons side="left">
+      <i class="button button-icon ion-ios-arrow-back"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <i class="button button-icon ion-ios-home" ng-click="irInicio();"></i>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="padding">
+    <div class="item item-image">
+      <img src="img/nycheesecake.jpg">
+    </div>
+    <p class="text-justify margenTexto">{{receta.descripcion}}</p>
+    <div class="row datosCocina">
+      <div class="col"><span class="num">45</span><br>Preparación</div>
+      <div class="col"><span class="num">30</span><br>Cocción</div>
+      <div class="col noBorde"><span class="num">2</span><br>Personas</div>
+    </div>
+    <div class="botonesPasos">
+      <button class="button button-outline button-assertive" ng-click="openModal(1)">
+        Ingredientes
+      </button>
+      <button class="button button-outline button-assertive" ng-click="openModal(2)">
+        Instrucciones
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
